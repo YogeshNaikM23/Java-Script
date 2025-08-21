@@ -1,0 +1,19 @@
+console.log("Data Types in JavaScript")
+
+let name="Yogi"; // in JavaScript the size of the string is 2*n where n is number of character in the variable
+let isAlive=true; //size of boolean is (32bits)4 byte
+let age=32; //size of number is (64 bits) 8byte
+let cgpa=8.5 //there is no float value in JS so the it considered as the number and size is same as number 
+
+console.table([typeof name,typeof isAlive,typeof age,typeof cgpa])
+
+let isMarried; //typeof this variable will be undefined
+let isSingle=null //typof this variable will be object
+
+console.log(typeof isMarried)
+console.log(typeof isSingle)
+
+//we can able to use the typeof in two methods they are 
+
+console.log(typeof isMarried)
+console.log(typeof(isMarried))
