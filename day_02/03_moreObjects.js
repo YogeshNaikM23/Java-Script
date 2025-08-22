@@ -32,10 +32,34 @@ let two={3:"c",4:"d"}
 // console.log(three);
 
 
-console.log(newObjects);
+// console.log(newObjects);
 
-console.log(Object.keys(newObjects))
-console.log(Object.values(newObjects))
-console.log(Object.entries(newObjects))
+// console.log(Object.keys(newObjects))
+// console.log(Object.values(newObjects))
+// console.log(Object.entries(newObjects))
 
+
+//destrucing the object
+
+let course={
+    name: "JavaScript",
+    price:"free",
+    instructor:"Yogesh"
+}
+
+// const {instructor}=course
+
+// console.log(instructor)
+
+const {instructor:ins}=course
+console.log(ins)
+
+//when we use the api they gave data in JSON file
+//synatx of JSON
+
+// {
+//     "name":"Yogesh",
+//     "courseName":"JAVASCRIPT",
+//     "price":"Completely free"
+// }
 
