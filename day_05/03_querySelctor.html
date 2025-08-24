@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Yogis Document
+        </title>
+    </head>
+
+    <head>
+        <body>
+            <div>
+            <h1>Hello This is yogi How are you</h1>
+        </div>
+        </body>
+    </head>
+    <script>
+        let newBody=document.querySelector("body")
+        newBody.style.backgroundColor="black"
+        let body=document.querySelector('body')
+        let div=document.createElement('div')
+        // div.classList.add("new-div")
+        div.className="new-div"
+        // div.id=Math.round(Math.random()*100)
+        div.id="newId"
+        
+        // div.setAttribute("style","color:red")
+        div.style.color="red"
+        
+       // div.innerText="hello"
+        let textNode=document.createTextNode("hello, div")
+        div.appendChild(textNode)
+        console.log(div)
+        div.style.fontSize="89px"
+        document.body.appendChild(div)
+        body.removeChild(div)
+        
+        
+
+        
+    </script>
+</html>
