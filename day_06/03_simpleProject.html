@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Yogis Documentation</title>
+    </head>
+    <body>
+        <h1>Hello this is yogi and i am frontend developer</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, nemo, numquam sequi totam voluptatum delectus minus 
+            vitae accusantium voluptate, soluta ipsum fugiat enim tempore?</p>
+    </body>
+
+    <script>
+        let name="Yogi"
+        let h1=document.createElement('h1')
+        let card=document.createElement('div')
+        let body=document.querySelector('body')
+        body.appendChild(card)
+        let p1=document.createElement('p')
+        let h3=document.createElement('h3')
+        let p=document.createElement('p')
+        let p2=document.createElement('p')
+        card.style.border = '2px solid #007bff';       // Blue border
+        card.style.borderRadius = '10px';              // Rounded corners
+        card.style.padding = '20px';                   // Inner spacing
+        card.style.margin = '30px';                    // Outer spacing
+        card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)'; // Soft shadow
+        card.style.backgroundColor = '#f9f9f9';        // Light background
+        card.style.fontFamily = 'Arial, sans-serif';   // Clean font
+        card.style.maxWidth = '900px';
+
+        let webURL='https://api.github.com/users/nahamsec'
+        let xhr=new XMLHttpRequest()
+        console.log("We are Here")
+        
+        xhr.open('GET',webURL)
+        console.log(xhr.readyState)
+       
+        xhr.onreadystatechange=()=>{
+            console.log(xhr.readyState)
+            if(xhr.readyState===4){
+                 data=JSON.parse(xhr.response)
+                 console.log(data)
+                h1.innerHTML=` Hi, ${data.name}`
+                 h3.innerHTML=`${data.bio}`
+                p.innerHTML=`Followers : ${data.followers}`
+                p1.innerHTML=`Following : ${data.following}`
+                p2.innerHTML=`Location : ${data.location}`
+                
+            }
+        }
+        
+        xhr.send()
+       card.appendChild(h1)
+       card.appendChild(h3)
+       card.appendChild(p)
+       card.appendChild(p1)
+       card.appendChild(p2)
+         
+        
+    </script>
+
+</html>
