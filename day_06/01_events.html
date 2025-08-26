@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Async Function
+        </title>
+    </head>
+    <body>
+        <h1>Hello This is Yogi</h1>
+        <button id="btn">Stop</button>
+        
+    </body>
+    <script>
+        let sayMyName=() => {
+            document.querySelector('h1').innerHTML="Hello"
+        }
+        let timeOutId=setTimeout(sayMyName, 4000);
+        
+        let butto=document.querySelector('#btn')
+        butto.addEventListener('click',()=>{
+            clearTimeout(timeOutId)
+            console.log("timeout is cancleed")
+        })
+        
+        
+        // setInterval(() => {
+        //     console.log("This is TimeInterval")
+        // }, 2000);
+    </script>
+</html>
