@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Yogis Document</title>
+    </head>
+    <body>
+        <h1>Hello This is Yogi</h1>
+        <h2>The Random Number is : <span id="random">0</span></h2>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </body>
+    <script>
+       
+        let documentRandom=document.querySelector('#random')
+        let start=document.querySelector('#start')
+        let stop =document.querySelector('#stop')
+        let isRun=false
+        let interval=()=>{
+            
+             let random=Math.floor(Math.random()*100)
+            documentRandom.innerHTML=random
+        }
+        let idInterval
+        start.addEventListener('click',()=>{
+            if(!isRun){
+                console.log(("start"));
+
+             idInterval=setInterval(() => {
+                interval()
+            }, 20);
+            isRun=true
+            }
+            
+        })
+        stop.addEventListener('click',()=>{
+            console.log("stop")
+            clearInterval(idInterval)
+            isRun=false
+        })
+    </script>
+</html>
